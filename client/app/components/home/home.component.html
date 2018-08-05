@@ -1,0 +1,182 @@
+<div id="mainDiv" class="container-fluid">
+  <div class="row" ng-if="!vm.apiNotFound">
+    <div class="col-sm-3 sidenav" style="height: 500px; overflow-y: auto;">
+      <br/>
+      <ul class="nav nav-pills nav-stacked">
+        <li ng-repeat="k in vm.details.leftPanel.links">
+
+          <a href="{{k.url}}" target="_blank" style="font-size: 20px;">{{k.title}}</a>
+
+        </li>
+
+      </ul>
+      <br>
+
+    </div>
+
+    <div class="col-sm-9 col-md-9" ng-if="!vm.showChatbot" id="DetailsDiv">
+      <div class="panel panel-default" ng-if="vm.details.graphFlag" style="height: 500px;">
+        
+        
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <!--  <nvd3 options="vm.options" data="vm.ndata"></nvd3>  -->
+
+              <!--  <div id="barChart">
+                        <canvas id="bar" class="chart chart-bar"
+                              chart-data="vm.loanData" chart-labels="vm.labels" chart-series="vm.series" chart-options="vm.loanChartOptions">
+                        </canvas>  
+                          </div> -->
+              <nvd3 options="vm.options" data="vm.barGraphData"></nvd3>
+              <br/>
+              <div>
+                <p class="alert alert-info">Total Loan Amount: {{vm.details.rightPanel.rightTop.graphDetails.summary.totalLoanAmount}} </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <!-- <div id="barChart">
+                                <canvas id="bar" class="chart chart-bar"
+                                  chart-data="vm.custData" chart-labels="vm.labels" chart-series="vm.series" chart-options="vm.custChartOptions">                            
+                                </canvas>
+                                
+                                  </div>  -->
+              <nvd3 options="vm.options" data="vm.custGraphData"></nvd3>
+
+              <br/>
+              <div>
+                <p class="alert alert-info">Total Customer Count: {{vm.details.rightPanel.rightTop.graphDetails.summary.totalCustomerCount}} </p>
+              </div>
+            </div>
+
+          </div>
+          <button class="glyphicon glyphicon-arrow-right btn btn-success btn-lg" ng-click="vm.getChartData()" style="float:right;border-radius: 50%"></button>
+        </div>
+        
+      </div>
+      <div ng-if="vm.details.newsFlag">
+        <div class="panel panel-default">
+          <div class="panel-body" style="height: 330px; overflow-y: scroll;">
+            <marquee Height=500px direction="down" scrollamount="3" scrolldelay="0">
+              <div ng-repeat="k in vm.details.rightPanel.rightTop.newsDetails.newsDataList">
+                <div class="well">
+
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img src="{{k.imageData}}" height="160px;" width="160px;" style="border-radius:50%;">
+                    </div>
+                    <div class="col-md-9">
+                      <b> Title:</b> {{k.title}}
+                      <br/>
+                      <b>Summary</b>: {{k.summary}}
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </marquee>
+
+          </div>
+
+
+          <div class="panel-body">
+
+            <div class="panel panel-primary">
+              <div class="panel-heading">News Source</div>
+              <div class="panel-body" style="padding-bottom: 0px;margin-bottom: 0px;">{{vm.details.rightPanel.rightBottom.source[0]}}</div>
+            </div>
+            <button class="glyphicon glyphicon-arrow-right btn btn-success btn-lg" ng-click="vm.getChartData()" style="float:right;border-radius: 50%"></button>
+          </div>
+        </div>
+      </div>
+      <div ng-if="vm.details.mapFlag">
+        <div class="panel panel-default" style="height: 500px;">
+          <div class="panel-body">
+
+            <div id="map_canvas">
+              <ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom' events="vm.map.events">
+                <ui-gmap-markers models="vm.markers" icon="'icon'" coords="'coords'" options="'options'" click="vm.markerClicked()">
+                </ui-gmap-markers>
+                <!-- <ui-gmap-markers models="vm.markers1" coords="'coords'" icon="'icon'" click="vm.markerClicked()">
+            </ui-gmap-markers>  -->
+              </ui-gmap-google-map>
+              <button class="glyphicon glyphicon-arrow-right btn btn-success btn-lg" ng-click="vm.getChartData()" style="float:right;border-radius: 50%"></button>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+
+
+      <div ng-if="vm.details.droneFlag">
+        <div class="panel panel-default" style="height: 500px;">
+         
+          <div class="panel-body">
+            
+            <div id="map_canvas" ng-if="!vm.showLine">
+              <ui-gmap-google-map center='vm.map1.center' zoom='vm.map1.zoom' events="vm.map1.events">
+                <ui-gmap-markers models="vm.droneMarkers" icon="'icon'" coords="'coords'" options="'options'" click="vm.markerClicked()">
+                </ui-gmap-markers>
+              </ui-gmap-google-map>
+              <button class="glyphicon glyphicon-arrow-right btn btn-success btn-lg" ng-click="vm.getChartData()" style="float:right;border-radius: 50%"></button>
+            </div>
+
+            <div id="map_canvas" ng-if="vm.showLine">
+              <ui-gmap-google-map center='vm.map1.center' zoom='vm.map1.zoom' events="vm.map1.events">
+                <ui-gmap-markers models="vm.droneMarkers" icon="'icon'" coords="'coords'" options="'options'" click="vm.markerClicked()">
+                </ui-gmap-markers>
+
+                <ui-gmap-polylines models="vm.map1.polylines" path="'path'" stroke="'stroke'" visible="'visible'" geodesic="'geodesic'" fit="'false'"
+                  editable="'editable'" draggable="'draggable'"></ui-gmap-polylines>
+
+              </ui-gmap-google-map>
+              <span style="font-weight: 50px;"><i>Time to destination = 5 minutes...</i> </span>
+              <button class="glyphicon glyphicon-arrow-right btn btn-success btn-lg" ng-click="vm.getChartData()" style="float:right;border-radius: 50%"></button>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+
+      <div ng-if="vm.details.droneImageFlag">
+        <div class="panel panel-default" style="height: 500px;">
+            
+            <div class="panel-body">
+              <h2 align="center">{{vm.droneCapturedTitle}}</h2>
+              <carousel interval="myInterval">
+                <slide ng-repeat="slide in vm.slides" active="slide.active">
+                  <img ng-src="{{slide.image}}" style="margin:auto; height: 350px;">
+                  <div class="carousel-caption">
+                    <h4>Drone captured image {{$index+1}}</h4>
+                    <p>{{slide.text}}</p>
+                  </div>
+                </slide>
+              </carousel>
+              
+                        </div>
+                        <button class="glyphicon glyphicon-arrow-right btn btn-success btn-lg" ng-click="vm.getChartData()" style="float:right;border-radius: 50%"></button>
+         </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-9" ng-if="vm.showChatbot">
+      <chat></chat>
+    </div>
+
+  </div>
+
+  <div class="row" ng-if="vm.apiNotFound">
+    <div class="col-md-12">
+      <h2 align="center" style="color: white;">No information available on any kind of natural disaster</h2>
+    </div>
+  </div>
+
+
+</div>

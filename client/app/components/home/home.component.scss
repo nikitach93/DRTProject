@@ -1,0 +1,99 @@
+.row.content {height: 1500px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color:#e6f1e8cf;
+      height: 100%;
+      border-radius:5px; 
+    }
+    .panel{
+      background-color:#e6f1e8cf;
+    }
+
+    #DetailsDiv{
+      padding-right : 0px !important;
+    }
+
+    .well{
+      border-color: #2582d4 !important;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+   
+    #mainDiv {
+      margin-left:10px;
+      position: relative;
+      display: block;
+    }
+    .angular-google-map-container {
+      height: 600px;
+    }
+    .nav>li>a {
+      background-color: #337ab7;
+      color: white;
+  }
+  .nav>li>a:hover {
+    background-color: #2d6a9f;
+    color: black;
+}
+
+
+
+    /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.nv-bars rect {
+  width: 10px !important;
+}
+
+#map {
+  height: 500px;
+}
+
+.marker_labels{
+background-color: red;
+}
+
+#map_canvas{
+  height: 500px;
+}
+
+.angular-google-map-container {
+  height: 420px;
+  margin-bottom: 15px;
+}
+
+.panel-primary {
+  padding: 15px;
+}

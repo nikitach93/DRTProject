@@ -1,0 +1,58 @@
+<nav class="navbar headerBar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><b><p class="hearderLinks">DRT</p></b></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a ui-sref="home" style="color:white;">Home</a></li>
+      <!-- <li>
+       <p> <select ng-model="vm.selectedName" ng-change="vm.getTextBox()" ng-options="item.name for item in vm.criterias" style="height:28px; border-radius:6px;"></select></p>
+      </li>
+
+      <li>
+         <p> <input type="text" ng-model="vm.criteriaObject.value" placeholder="{{vm.textValue}}" style="height:28px; border:2px solid #73AD21;border-radius:6px;"/> </p>
+      </li>
+      <li>
+        <p> <select ng-model="vm.calamity"  ng-options="item.name for item in vm.calamities" style="height:28px; border-radius:6px;"></select></p>
+      </li>
+
+      <li>
+       <p> <button class="btn btn-success" ng-click="vm.generateURL()">Search</button> </p>
+    </li> -->
+    <li>
+        <form class="form-inline form-border">
+            <div class="form-group">
+                <label for="option">Inquire By:</label>
+                <select placeholder="Inquire by" ng-model="vm.selectedName" ng-change="vm.getTextBox()" ng-options="item.name for item in vm.criterias" style="height:28px;border:2px solid  mediumslateblue; border-radius:6px;" class="ng-pristine ng-untouched ng-valid ng-empty"></select>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Inquire by Value" ng-model="vm.criteriaObject.value" placeholder="" style="height:28px; border:2px solid  mediumslateblue;border-radius:6px;" class="ng-pristine ng-untouched ng-valid ng-empty">
+            </div>
+            <div class="form-group">
+                <label for="optoin">Calamity :</label>
+                <select placeholder="select" ng-model="vm.calamity"  ng-options="item.name for item in vm.calamities" style="height:28px;border:2px solid  mediumslateblue; border-radius:6px;"></select>
+            </div>
+            <button class="btn btn-success glyphicon glyphicon-search" style="border-radius:50%" ng-click="vm.generateURL()"></button>
+        </form>
+    </li>
+
+      
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+
+      <li ng-show="vm.selectedName.id =='BorrowersAccountNumber'"> <div style="margin-top: 15px;margin-right: 5px;">
+            <span >
+              <label style="color:whitesmoke">customer outreach</label>
+              <input type="checkbox" style="position:relative;left: 0;vertical-align: sub" ng-model="vm.isChatbot" ng-click="vm.getChatBot()" id="togBtn1" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty">
+            </span>  
+          </div>
+      </li>
+      <li>  <label class="switch"><input type="checkbox"  ng-model="vm.selectedAppMode" ng-true-value="true" ng-false-value="false" ng-change="vm.changeMode()" style="height:28px; border-radius:6px;" id="togBtn"><div class="slider round">
+      </div></label>
+        </li>
+
+    
+    </ul>
+  </div>
+</nav>

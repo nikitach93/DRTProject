@@ -1,0 +1,99 @@
+/*custom css by prajkty on 15th april 16*/
+
+/*Bootstrap font files*/
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+
+    src: url('/vendor/plugins/bootstrapv3/fonts/glyphicons-halflings-regular.eot');
+    src: url('/vendor/plugins/bootstrapv3/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/vendor/plugins/bootstrapv3/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('/vendor/plugins/bootstrapv3/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/vendor/plugins/bootstrapv3/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/vendor/plugins/bootstrapv3/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+/*font awesome font files*/
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('/vendor/plugins/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.1');
+    src: url('/vendor/plugins/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.6.1') format('embedded-opentype'), url('/vendor/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.1') format('woff2'), url('/vendor/plugins/font-awesome/fonts/fontawesome-webfont.woff?v=4.6.1') format('woff'), url('/vendor/plugins/font-awesome/fonts/fontawesome-webfont.ttf?v=4.6.1') format('truetype'), url('/vendor/plugins/font-awesome/fonts/fontawesome-webfont.svg?v=4.6.1#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*jquery scroll bar*/
+
+.scrollbar-light > .scroll-element .scroll-element_size {
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+');
+}
+.scrollbar-light > .scroll-element .scroll-bar {
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNWY1ZjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+');
+}
+/*external urls from webarch.css*/
+
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);*/
+
+.scrollup {
+    background: url('/theme/img/pullup.png') no-repeat;
+}
+
+.status-icon {
+    background: url('/theme/img/icon/status.png') no-repeat;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/custom-set.eot');
+  src: url('../fonts/custom-set.eot?#iefix') format('embedded-opentype'), url('../fonts/custom-set.woff') format('woff'), url('../fonts/custom-set.ttf') format('truetype'), url('../fonts/custom-set.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.notification-alert {
+    background-image: url("/theme/img/notification-alert.png");
+}
+.iconset {
+    background: url("/theme/img/icon/top-tray.png") no-repeat;
+}
+.grid.box .grid-title .tools a {
+    background: url(/theme/img/icon/portlet-tray.png) no-repeat;
+}
+.grid.simple .grid-title .tools a,
+.grid.solid .grid-title .tools a {
+    background: url('/theme/img/icon/portlet-tray.png') no-repeat;
+}
+.alert .close {
+    background: url("/theme/img/icon/noti-cross.png") no-repeat scroll 0 0 transparent;
+}
+.tiles .controller a {
+    background: url('/theme/img/icon/portlet-tray.png') no-repeat;
+}
+.widget-item .controller a {
+    background: url('/theme/img/icon/portlet-tray.png') no-repeat;
+}
+.widget .controller a {
+    background: url('/theme/img/icon/portlet-tray.png') no-repeat;
+}
+.nav .tools a {
+    background: url('/theme/img/icon/portlet-tray.png') no-repeat;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 200/100), only screen and (min-device-pixel-ratio: 2) {
+    .grid.simple .grid-title .tools a {
+        background: url('/theme/img/icon/portlet-tray-2x.png');
+    }
+    .tiles .controller a {
+        background: url('/theme/img/icon/portlet-tray-2x.png');
+    }
+    .widget-item .controller a {
+        background: url('/theme/img/icon/portlet-tray-2x.png');
+    }
+    .iconset {
+        background: url('/theme/img/icon/top-trayx2.png') no-repeat;
+    }
+    .status-icon {
+        background: url('/theme/img/icon/status2x.png');
+    }
+    .scrollup {
+        background: url('/theme/img/pullup2x.png');
+    }
+    .alert .close {
+        background: url("/theme/img/icon/noti-cross-2x.png") no-repeat scroll 0 0 transparent;
+    }
+}

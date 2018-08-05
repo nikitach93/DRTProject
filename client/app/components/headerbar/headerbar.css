@@ -1,0 +1,112 @@
+.headerBar{background-color:#337ab7;}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+    top: 8px;
+    margin-right: 20px;
+  }
+  
+  .switch input {display:none;}
+  
+  
+  .slider { 
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f48942;
+    -webkit-transition: .4s;
+    transition: .4s;
+     border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2ab934;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(55px);
+  }
+  
+  /*------ ADDED CSS ---------*/
+  .slider:after
+  {
+   content:'VIRTUAL';
+   color: white;
+   display: block;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   top: 50%;
+   left: 65%;
+   font-size: 10px;
+   font-family: Verdana, sans-serif;
+  }
+  
+  input:checked + .slider:after
+  {  
+    content:'REAL';
+    left: 35%;
+  }
+  .navbar-brand{
+    color: "black";
+  }
+
+  
+.navbar-nav>li>p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-nav>li>p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.nav>li>p {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.hearderLinks {
+  color:white;
+  font-size: 30px;
+}
+
+.form-border{
+  border: thin  mediumslateblue;
+  border-style: solid;
+  margin-top: 5px;
+  margin-left: 20px;
+  border-radius: 5PX;
+  PADDING: 2px;
+  background-color: #355a7426;
+}    
+
+
+  /*--------- END --------*/
